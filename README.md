@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Young Stage
 
-## Getting Started
+A curated library of theater resources for directors and educators working with child performers under fourteen.
 
-First, run the development server:
+🌐 [theyoungstage.org](https://theyoungstage.org)
+
+## What it is
+
+A free, open index of drama games, short plays, Shakespeare adaptations, songs, and warm-ups, organized by **age band** (5–7, 8–10, 11–13) and **category** (drama games, improv, short plays, reader's theater, Shakespeare, songs, voice & movement). Every link points back to the original publisher — we don't host third-party content.
+
+## Tech
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- TypeScript
+- Fonts: Fraunces (serif) + Geist (sans)
+- Deployed on [Vercel](https://vercel.com)
+
+## Local dev
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding resources
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Resource data lives in [`src/data/resources.ts`](src/data/resources.ts). Append a new object — pages regenerate automatically.
 
-## Learn More
+```ts
+{
+  id: "unique-id",
+  title: "Resource Title",
+  source: "Publisher Name",
+  description: "One- or two-sentence description.",
+  url: "https://...",
+  category: "drama-games", // see types.ts for valid slugs
+  ageMin: 6,
+  ageMax: 12,
+  free: true,
+  format: "article", // article | scripts | lesson-plans | videos | ebook | pdf | directory
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site code is MIT-licensed. Resources linked from the site retain their original copyright and licensing — please respect each publisher's terms.
