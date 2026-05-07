@@ -1,9 +1,64 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
+
+const SITE_URL = "https://theyoungstage.org";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About The Young Stage — a free, open library of theater resources for directors and educators working with young performers. Founded by Aidan Yates. Open by default; free forever; supported by memberships, donations, and (maybe) ads.",
+  alternates: { canonical: `${SITE_URL}/about` },
+  openGraph: {
+    title: "About The Young Stage",
+    description:
+      "A free, open library of theater resources for directors and educators working with young performers. Open by default. Free forever.",
+    url: `${SITE_URL}/about`,
+    type: "article",
+  },
+  twitter: { card: "summary_large_image", title: "About The Young Stage" },
+};
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${SITE_URL}/about#about`,
+      url: `${SITE_URL}/about`,
+      name: "About The Young Stage",
+      description:
+        "A free, open library of theater resources for directors and educators working with young performers.",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/about#aidan-yates`,
+      name: "Aidan Yates",
+      jobTitle: "Founder",
+      image: `${SITE_URL}/aidan-yates.png`,
+      worksFor: { "@id": `${SITE_URL}/#organization` },
+      alumniOf: [
+        { "@type": "CollegeOrUniversity", name: "The New School" },
+        { "@type": "CollegeOrUniversity", name: "Temple University" },
+        { "@type": "CollegeOrUniversity", name: "University of the Arts" },
+      ],
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          name: "Certificate in Social, Emotional, and Ethical Learning",
+          recognizedBy: { "@type": "CollegeOrUniversity", name: "Emory University" },
+        },
+      ],
+    },
+  ],
+};
 
 export default function AboutPage() {
   return (
     <article className="mx-auto max-w-2xl px-6 py-20 text-stone-700 dark:text-stone-300">
+      <JsonLd data={aboutJsonLd} />
       <span className="text-xs font-medium uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400">About</span>
       <h1 className="mt-4 font-serif text-5xl tracking-tight text-stone-900 dark:text-stone-50">
         A practical library for the rehearsal room.

@@ -1,0 +1,30 @@
+# The Young Stage
+
+> A free, curated library of theater resources for directors and educators working with child performers under fourteen. Drama games, short plays, Shakespeare adaptations, songs, reader's theater, and warm-ups — organized by age band (5–7, 8–10, 11–13) and category, linked back to the original publishers.
+
+The Young Stage was founded by Aidan Yates, a B.F.A. Drama student at The New School with prior training at Temple University and the University of the Arts. The site indexes openly published material and credits each author clearly; it does not host third-party content. Browsing is free and will always remain free.
+
+## Age bands
+
+- [Ages 5–7](https://theyoungstage.org/age/5-7): Early elementary — play-led activities for short attention spans.
+- [Ages 8–10](https://theyoungstage.org/age/8-10): Upper elementary — story-ready, growing focus.
+- [Ages 11–13](https://theyoungstage.org/age/11-13): Middle school — text work, scene-building, vocal range.
+
+## Categories
+
+- [Drama Games](https://theyoungstage.org/category/drama-games): Warm-ups, focus games, ensemble builders.
+- [Improv](https://theyoungstage.org/category/improv): Yes-and, scene work, story games.
+- [Short Plays](https://theyoungstage.org/category/short-plays): Royalty-free scripts for young casts.
+- [Reader's Theater](https://theyoungstage.org/category/readers-theater): Minimal-staging script work.
+- [Shakespeare](https://theyoungstage.org/category/shakespeare): Adapted scripts and teaching tools for young performers.
+- [Songs](https://theyoungstage.org/category/songs): Audition repertoire and musical theater picks.
+- [Voice & Movement](https://theyoungstage.org/category/voice-movement): Vocal warm-ups, physical exercises.
+
+## About & policy
+
+- [About](https://theyoungstage.org/about): Philosophy, free-forever commitment, support paths (memberships, donations, ad policy), and founder bio.
+
+## Optional
+
+- [Sitemap](https://theyoungstage.org/sitemap.xml)
+- [GitHub](https://github.com/mechanicalreproductions/theyoungstage)
